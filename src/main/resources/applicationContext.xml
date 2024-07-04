@@ -1,0 +1,21 @@
+<!-- applicationContext.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="SpongeBobXML" class="ru.irlix_elementary.spring.model.Person">
+        <constructor-arg value="30"/>
+        <constructor-arg value="Sponge BobXML"/>
+    </bean>
+
+    <bean id="PatrickXML" class="ru.irlix_elementary.spring.model.Person">
+        <constructor-arg value="35"/>
+        <constructor-arg value="PatrickXML"/>
+     </bean>
+
+    <bean id="SquidwardXML" class="ru.irlix_elementary.spring.model.Person">
+        <constructor-arg value="40"/>
+        <constructor-arg value="SquidwardXML"/>
+    </bean>
+</beans>
