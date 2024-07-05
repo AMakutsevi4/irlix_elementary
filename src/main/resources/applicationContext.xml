@@ -33,4 +33,8 @@
     <bean id="GooseBean" class="ru.irlix_elementary.spring.example3.Goose">
         <constructor-arg value="Goose"/>
     </bean>
+
+    <bean id="HunterBean" class="ru.irlix_elementary.spring.example3.Hunter">
+        <property name="currentAnimal" ref="GooseBean"/>
+    </bean>
 </beans>

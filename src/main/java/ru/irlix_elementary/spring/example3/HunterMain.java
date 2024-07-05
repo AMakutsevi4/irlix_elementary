@@ -10,24 +10,27 @@ public class HunterMain {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Hunter hunter = new Hunter();
+//        Hunter hunter = new Hunter();
+//
+//        /*Вытаскиваем бины из контекста*/
+//        Animal frog = context.getBean("FrogBean", Animal.class);
+//        Animal goat = context.getBean("GoatBean", Animal.class);
+//        Animal goose = context.getBean("GooseBean", Animal.class);
+//
+//
+//        /*Обозначаем имя животного*/
+//        hunter.setCurrentAnimal(frog);
+//        /*вызываем метод класса Hunter*/
+//        hunter.killAnimal();
+//
+//        hunter.setCurrentAnimal(goat);
+//        hunter.killAnimal();
+//
+//        hunter.setCurrentAnimal(goose);
+//        hunter.killAnimal();
 
-        /*Вытаскиваем бины из контекста*/
-        Animal frog = context.getBean("FrogBean", Animal.class);
-        Animal goat = context.getBean("GoatBean", Animal.class);
-        Animal goose = context.getBean("GooseBean", Animal.class);
 
-
-        /*Обозначаем имя животного*/
-        hunter.setCurrentAnimal(frog);
-        /*вызываем метод класса Hunter*/
-        hunter.killAnimal();
-
-        hunter.setCurrentAnimal(goat);
-        hunter.killAnimal();
-
-        hunter.setCurrentAnimal(goose);
-        hunter.killAnimal();
-
+        Hunter hunter1 = context.getBean("HunterBean", Hunter.class);
+        hunter1.killAnimal();
     }
 }
