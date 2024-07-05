@@ -4,18 +4,21 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="SpongeBobXML" class="ru.irlix_elementary.spring.model.Person">
+    <bean id="SpongeBobXML" class="ru.irlix_elementary.spring.example1.model.Person">
         <constructor-arg value="30"/>
         <constructor-arg value="Sponge BobXML"/>
     </bean>
 
-    <bean id="PatrickXML" class="ru.irlix_elementary.spring.model.Person">
+    <bean id="PatrickXML" class="ru.irlix_elementary.spring.example1.model.Person">
         <constructor-arg value="35"/>
         <constructor-arg value="PatrickXML"/>
      </bean>
 
-    <bean id="SquidwardXML" class="ru.irlix_elementary.spring.model.Person">
+    <bean id="SquidwardXML" class="ru.irlix_elementary.spring.example1.model.Person">
         <constructor-arg value="40"/>
         <constructor-arg value="SquidwardXML"/>
+    </bean>
+
+    <bean id="MusicBean" class="ru.irlix_elementary.spring.example2.JazzMusic">
     </bean>
 </beans>

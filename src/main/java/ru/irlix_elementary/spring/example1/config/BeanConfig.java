@@ -1,8 +1,8 @@
-package ru.irlix_elementary.spring.config;
+package ru.irlix_elementary.spring.example1.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import ru.irlix_elementary.spring.model.Person;
+import ru.irlix_elementary.spring.example1.model.Person;
 
 @Configuration
 public class BeanConfig {

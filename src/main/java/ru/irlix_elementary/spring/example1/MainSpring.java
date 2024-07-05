@@ -1,10 +1,10 @@
-package ru.irlix_elementary.spring;
+package ru.irlix_elementary.spring.example1;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import ru.irlix_elementary.spring.config.BeanConfig;
-import ru.irlix_elementary.spring.model.Person;
+import ru.irlix_elementary.spring.example1.config.BeanConfig;
+import ru.irlix_elementary.spring.example1.model.Person;
 
 public class MainSpring {
 

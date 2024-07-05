@@ -1,4 +1,4 @@
-package ru.irlix_elementary.spring.model;
+package ru.irlix_elementary.spring.example1.model;
 
 public class Person {
 
