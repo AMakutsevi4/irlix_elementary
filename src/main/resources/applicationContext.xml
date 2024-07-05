@@ -21,4 +21,16 @@
 
     <bean id="MusicBean" class="ru.irlix_elementary.spring.example2.JazzMusic">
     </bean>
+
+    <bean id="FrogBean" class="ru.irlix_elementary.spring.example3.Frog">
+        <constructor-arg value="Frog"/>
+    </bean>
+
+    <bean id="GoatBean" class="ru.irlix_elementary.spring.example3.Goat">
+        <constructor-arg value="Goat"/>
+    </bean>
+
+    <bean id="GooseBean" class="ru.irlix_elementary.spring.example3.Goose">
+        <constructor-arg value="Goose"/>
+    </bean>
 </beans>
