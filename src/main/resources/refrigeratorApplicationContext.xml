@@ -1,0 +1,52 @@
+<!-- applicationContext.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="Milk1" class="ru.irlix_elementary.spring.example4.MilkProduct">
+        <constructor-arg value="5"/>
+    </bean>
+
+    <bean id="Milk2" class="ru.irlix_elementary.spring.example4.MilkProduct">
+        <constructor-arg value="10"/>
+    </bean>
+
+    <bean id="Milk3" class="ru.irlix_elementary.spring.example4.MilkProduct">
+        <constructor-arg value="15"/>
+    </bean>
+
+    <bean id="Milk4" class="ru.irlix_elementary.spring.example4.MilkProduct">
+        <constructor-arg value="20"/>
+    </bean>
+
+
+    <bean id="Vegetable1" class="ru.irlix_elementary.spring.example4.VegetablesProduct">
+        <constructor-arg value="orange"/>
+    </bean>
+
+    <bean id="Vegetable2" class="ru.irlix_elementary.spring.example4.VegetablesProduct">
+        <constructor-arg value="cucumber"/>
+    </bean>
+
+    <bean id="Vegetable3" class="ru.irlix_elementary.spring.example4.VegetablesProduct">
+        <constructor-arg value="potato"/>
+    </bean>
+
+
+    <bean id="Refrigerator" class="ru.irlix_elementary.spring.example4.Refrigerator">
+        <constructor-arg value="DEXP"/>
+        <property name="productList">
+           <array>
+               <ref bean="Milk1"/>
+               <ref bean="Milk2"/>
+               <ref bean="Milk3"/>
+               <ref bean="Milk4"/>
+               <ref bean="Vegetable1"/>
+               <ref bean="Vegetable2"/>
+               <ref bean="Vegetable3"/>
+           </array>
+        </property>
+    </bean>
+
+</beans>
