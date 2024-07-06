@@ -13,6 +13,11 @@ public class TestMusic {
         MusicPlayer musicPlayer = new MusicPlayer(music);
         /*музыкальный плеер использует вышеописанную зависимость и выполняет метод playMusic*/
         musicPlayer.playMusic();
+
+        /*Получаем бин musicPlayer и вызываем метод для перечисления всей музыки*/
+        MusicPlayer musicPlayer1 = context.getBean("PlayAllMusic", MusicPlayer.class);
+
+        musicPlayer1.playAllMusic();
         /*Закрываем контекст*/
         context.close();
     }

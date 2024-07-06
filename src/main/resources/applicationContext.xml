@@ -22,6 +22,26 @@
     <bean id="MusicBean" class="ru.irlix_elementary.spring.example2.JazzMusic">
     </bean>
 
+    <bean id="JazzMusic" class="ru.irlix_elementary.spring.example2.JazzMusic">
+    </bean>
+
+    <bean id="RockMusic" class="ru.irlix_elementary.spring.example2.RockMusic">
+    </bean>
+
+    <bean id="ClassicalMusic" class="ru.irlix_elementary.spring.example2.ClassicalMusic">
+    </bean>
+
+    <bean id="PlayAllMusic" class="ru.irlix_elementary.spring.example2.MusicPlayer">
+        <property name="musicList">
+           <array>
+               <ref bean="JazzMusic"></ref>
+               <ref bean="RockMusic"></ref>
+               <ref bean="ClassicalMusic"></ref>
+           </array>
+        </property>
+    </bean>
+
+
     <bean id="FrogBean" class="ru.irlix_elementary.spring.example3.Frog">
         <constructor-arg value="Frog"/>
     </bean>
