@@ -1,0 +1,34 @@
+<!-- applicationContext.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="headOne" class="ru.irlix_elementary.spring.example5.Head" scope="prototype">
+        <constructor-arg value="3"/>
+        <constructor-arg value="3"/>
+    </bean>
+
+    <bean id="headTwo" class="ru.irlix_elementary.spring.example5.Head" scope="prototype">
+        <constructor-arg value="4"/>
+        <constructor-arg value="5"/>
+    </bean>
+
+    <bean id="headThree" class="ru.irlix_elementary.spring.example5.Head" scope="prototype">
+        <constructor-arg value="6"/>
+        <constructor-arg value="7"/>
+    </bean>
+
+    <bean id="hydra" class="ru.irlix_elementary.spring.example5.Hydra" scope="singleton">
+        <constructor-arg value="bigDragon"/>
+        <constructor-arg name="headList">
+           <array>
+               <ref bean="headOne"/>
+               <ref bean="headTwo"/>
+               <ref bean="headThree"/>
+           </array>
+        </constructor-arg>
+    </bean>
+
+</beans>
