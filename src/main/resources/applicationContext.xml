@@ -57,4 +57,9 @@
     <bean id="hunterBean" class="ru.irlix_elementary.spring.example3.Hunter">
         <property name="currentAnimal" ref="gooseBean"/>
     </bean>
+
+    <!-- Определяем бин с использованием фабричного метода -->
+    <bean id="hunterBeanFactory" class="ru.irlix_elementary.spring.example3.HunterFactory" factory-method="createHunter">
+
+    </bean>
 </beans>

@@ -30,7 +30,13 @@ public class HunterMain {
 //        hunter.killAnimal();
 
 
-        Hunter hunter1 = context.getBean("HunterBean", Hunter.class);
+        Hunter hunter1 = context.getBean("hunterBean", Hunter.class);
         hunter1.killAnimal();
+
+        /*Загружаем контекст и получаем бин*/
+        Hunter hunter2 = context.getBean("hunterBeanFactory", Hunter.class);
+        System.out.println(hunter2);
+
+
     }
 }
