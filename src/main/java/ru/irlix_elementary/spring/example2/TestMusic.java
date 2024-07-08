@@ -9,8 +9,9 @@ public class TestMusic {
                 new ClassPathXmlApplicationContext("applicationContext.xml");
 
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-
+        
         musicPlayer.playMusic();
         musicPlayer.playAllMusic();
+        musicPlayer.playRandomMusic();
     }
 }
