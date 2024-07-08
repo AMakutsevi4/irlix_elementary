@@ -1,8 +1,9 @@
 <!-- applicationContext.xml -->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="spongeBobXML" class="ru.irlix_elementary.spring.example1.model.Person">
         <constructor-arg value="30"/>
@@ -19,27 +20,8 @@
         <constructor-arg value="SquidwardXML"/>
     </bean>
 
-    <bean id="musicBean" class="ru.irlix_elementary.spring.example2.JazzMusic">
-    </bean>
-
-    <bean id="jazzMusic" class="ru.irlix_elementary.spring.example2.JazzMusic">
-    </bean>
-
-    <bean id="rockMusic" class="ru.irlix_elementary.spring.example2.RockMusic">
-    </bean>
-
-    <bean id="classicalMusic" class="ru.irlix_elementary.spring.example2.ClassicalMusic">
-    </bean>
-
-    <bean id="playAllMusic" class="ru.irlix_elementary.spring.example2.MusicPlayer">
-        <property name="musicList">
-           <array>
-               <ref bean="jazzMusic"/>
-               <ref bean="rockMusic"/>
-               <ref bean="classicalMusic"/>
-           </array>
-        </property>
-    </bean>
+<!--   Данная конфигурация необходима для указания Spring где автоматически искать и регистрировать бины-->
+    <context:component-scan base-package="ru.irlix_elementary.spring" />
 
 
     <bean id="frogBean" class="ru.irlix_elementary.spring.example3.Frog">
