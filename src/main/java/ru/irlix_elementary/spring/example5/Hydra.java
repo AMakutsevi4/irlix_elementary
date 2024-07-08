@@ -1,5 +1,8 @@
 package ru.irlix_elementary.spring.example5;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -20,6 +23,17 @@ public class Hydra {
                 new Head(6, 7));
     }
 
+    @PostConstruct
+    public void doMyInit() {
+        System.out.println("Здесь возможна инициализация ресурсов, "
+                + "обращение к внешним файлам, запуск БД");
+    }
+
+    @PreDestroy
+    public void doMyDestroy() {
+        System.out.println("Здесь возможно очищение ресурсов, "
+                + "закрытие потоков ввода-вывода, закрытие доступа к БД");
+    }
 
     @Override
     public String toString() {
