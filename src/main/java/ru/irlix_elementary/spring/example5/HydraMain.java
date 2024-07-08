@@ -1,13 +1,12 @@
 package ru.irlix_elementary.spring.example5;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class HydraMain {
 
     public static void main(String[] args) {
-        /*Создаем объект context для дальнейшей работы с бинами*/
-        ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext.xml");
+        AnnotationConfigApplicationContext context =
+                new AnnotationConfigApplicationContext(HydraConfig.class);
         /*Достаём бин hydra из контекста*/
         Hydra hydra = context.getBean("hydra", Hydra.class);
         /*Выводим бин на экран*/

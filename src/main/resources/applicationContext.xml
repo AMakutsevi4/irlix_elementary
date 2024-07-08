@@ -20,13 +20,6 @@
         <constructor-arg value="SquidwardXML"/>
     </bean>
 
-<!--   Данная конфигурация необходима для указания Spring где автоматически искать и регистрировать бины-->
-    <context:component-scan base-package="ru.irlix_elementary.spring" />
-
-   <!-- Данная конфигурация необходима для явного присваивания полям значения через аннотацию @Value с помощью файло properties-->
-    <context:property-placeholder location="classpath:application.properties"/>
-
-
     <bean id="frogBean" class="ru.irlix_elementary.spring.example3.Frog">
         <constructor-arg value="Frog"/>
     </bean>
