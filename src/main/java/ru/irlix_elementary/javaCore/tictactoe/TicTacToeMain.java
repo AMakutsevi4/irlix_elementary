@@ -1,4 +1,4 @@
-package ru.irlix_elementary.spring.tictactoe;
+package ru.irlix_elementary.javaCore.tictactoe;
 
 public class TicTacToeMain {
 

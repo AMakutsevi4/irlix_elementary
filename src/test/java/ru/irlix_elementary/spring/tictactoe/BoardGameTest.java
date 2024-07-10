@@ -1,6 +1,7 @@
 package ru.irlix_elementary.spring.tictactoe;
 
 import org.junit.jupiter.api.Test;
+import ru.irlix_elementary.javaCore.tictactoe.BoardGame;
 
 import static org.junit.jupiter.api.Assertions.*;
 

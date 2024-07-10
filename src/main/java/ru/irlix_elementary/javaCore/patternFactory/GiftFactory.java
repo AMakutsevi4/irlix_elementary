@@ -1,4 +1,4 @@
-package ru.irlix_elementary.spring.example6;
+package ru.irlix_elementary.javaCore.patternFactory;
 
 public class GiftFactory {
 
